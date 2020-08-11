@@ -28,19 +28,19 @@ public class Player extends GameObject {
         //handler.addObject(new Trail(x, y, ID.Trail, Color.black, 32, 32, 0.05f, handler));
         scoreKeep++;
         scoreKeep2++;
-        HUD hud = new HUD();
+        System.out.println(scoreKeep2);
 
         if(scoreKeep >= 10){
-            if (scoreKeep2<100){
+            if (scoreKeep2<1000){
                 handler.addObject(new EnemyBossBullet((int)x+10, (int)y-10, ID.EnemyBossBullet, handler));
                 scoreKeep =0;
             }
-            else if (scoreKeep2>=100&scoreKeep2<200){
+            else if (scoreKeep2>=1000&scoreKeep2<2000){
                 handler.addObject(new EnemyBossBullet((int)x+5, (int)y-5, ID.EnemyBossBullet, handler));
                 handler.addObject(new EnemyBossBullet((int)x+10, (int)y-10, ID.EnemyBossBullet, handler));
                 scoreKeep =0;
             }
-            else if (scoreKeep2>=200){
+            else if (scoreKeep2>=2000){
                 handler.addObject(new EnemyBossBullet((int)x+0, (int)y-0, ID.EnemyBossBullet, handler));
                 handler.addObject(new EnemyBossBullet((int)x+10, (int)y-10, ID.EnemyBossBullet, handler));
                 handler.addObject(new EnemyBossBullet((int)x+20, (int)y-20, ID.EnemyBossBullet, handler));

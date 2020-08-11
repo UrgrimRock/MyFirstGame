@@ -38,6 +38,20 @@ public class SmartEnemy extends GameObject {
         //if (y <= 0 || y >= Game.HEIGHT - 70) velY *= -1;
         //if (x <= 0 || x >= Game.WIDTH - 32) velX *= -1;
         handler.addObject(new Trail(x, y, ID.Trail, Color.green, 16, 16, 0.05f, handler));
+        collision();
+    }
+    private  void  collision(){
+        for (int i = 0; i < handler.obiect.size(); i++) {
+
+            GameObject tempObject = handler.obiect.get(i);
+
+            if(tempObject.getId()== ID.EnemyBossBullet){
+                if(getBounds().intersects(tempObject.getBounds())){
+                    handler.removeObject(this);
+
+                }
+            }
+        }
     }
 
 
