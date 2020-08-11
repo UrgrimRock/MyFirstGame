@@ -125,6 +125,7 @@ public class Menu extends MouseAdapter {
             Font fnt = new Font("arial", 1, 50);
             Font fnt2 = new Font("arial", 1, 30);
 
+
             g.setFont(fnt);
             g.setColor(Color.white);
             g.drawString("Menu", 240, 70);
@@ -154,7 +155,7 @@ public class Menu extends MouseAdapter {
             g.drawString("Help", 240, 70);
 
             g.setFont(fnt3);
-            g.drawString("Use WASD to move HUJU", 150, 200);
+            g.drawString("Use WASD to move", 150, 200);
 
 
             g.setFont(fnt2);
